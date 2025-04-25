@@ -78,7 +78,6 @@
         grid-template-columns: repeat(3, 1fr);
     }
     .about__description{
-        margin: 0.1rem;
         padding: 0;
     }
   }
