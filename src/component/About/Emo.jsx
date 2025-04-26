@@ -146,21 +146,53 @@ export default function CustomCube() {
     document.addEventListener("touchstart", handleTouchStart);
     document.addEventListener("touchmove", handleTouchMove);
 
-    // Animation
+    let lastMoveTime = Date.now();
+    let isUserActive = true;
+
+    document.addEventListener('mousemove', () => {
+      lastMoveTime = Date.now();
+      isUserActive = true;
+    });
+
+    document.addEventListener('touchmove', () => {
+      lastMoveTime = Date.now();
+      isUserActive = true;
+    });
+
     function animate() {
       requestAnimationFrame(animate);
 
-      cube.rotation.y = mouseX * maxRotation;
-      cube.rotation.x = mouseY * maxRotation;
+      const now = Date.now();
 
-      if (Math.abs(mouseX) < 0.1 && Math.abs(mouseY) < 0.1) {
-        cube.rotation.y += 0.002;
-        cube.rotation.x += 0.001;
+      if (now - lastMoveTime > 500) { // 3 seconds of inactivity
+        isUserActive = false;
+      }
+
+      if (isUserActive) {
+        // Move based on mouse or touch
+        cube.rotation.y = mouseX * maxRotation;
+        cube.rotation.x = mouseY * maxRotation;
+      } else {
+        // Auto rotate slowly when no user activity
+        adjustRotation();
+        function adjustRotation() {
+          cube.rotation.y += 0.002;
+          if (now - lastMoveTime > 3000) {
+            cube.rotation.y -= 0.004;
+            if(now - lastMoveTime > 6000) {
+              cube.rotation.y += 0.008;
+              lastMoveTime = now; // Reset last move time to avoid continuous rotation
+              adjustRotation();
+            }
+          }
+        }
       }
 
       renderer.render(scene, camera);
     }
+
     animate();
+
 
     function handleResize() {
       const width = container.clientWidth;
