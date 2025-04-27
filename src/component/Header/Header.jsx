@@ -27,7 +27,7 @@ function Header() {
                     </li>
                     <li className="nav__item">
                         <a href="#education" className="nav__link">
-                            <i className="uil uil-graduation-cap nav__icon"></i>Education
+                            <i className="uil uil-graduation-cap nav__icon"></i>Academics
                         </a>
                     </li>
                     <li className="nav__item">

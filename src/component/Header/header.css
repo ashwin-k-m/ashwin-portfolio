@@ -105,6 +105,10 @@ header {
 }
 
 @media screen and (max-width: 350px) {
+    .header{
+        max-width: 344px;
+        width: 100%;
+    }
     .nav__menu{
         padding: 2rem 0.25rem 4rem;
     }
