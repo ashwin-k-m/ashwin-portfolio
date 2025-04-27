@@ -3,7 +3,7 @@ import React from 'react'
 function Soft() {
     return (
         <div className="skills__content">
-            <h3 className="skills__title">Languages & Testing</h3>
+            <h3 className="skills__title">Testing & Add-Ons</h3>
             <div className="skills__box">
                 <div className="skills__group">
                     <div className="skills__data">
@@ -15,27 +15,27 @@ function Soft() {
                     </div>
 
                     <div className="skills__data">
-                        <i className="bx bx-edit-alt"></i>
+                        <i className="bx bx-shape-triangle"></i>
                         <div>
-                            <h3 className="skills__name">Hindi</h3>
-                            <span className="skills__level">Intermediate</span>
+                            <h3 className="skills__name">Three JS</h3>
+                            <span className="skills__level">Beginner</span>
                         </div>
                     </div>
                 </div>
                 <div className="skills__group">
                     <div className="skills__data">
-                        <i className="bx bx-edit-alt"></i>
+                        <i className="bx bxl-typescript"></i>
                         <div>
-                            <h3 className="skills__name">English</h3>
-                            <span className="skills__level">Advanced</span>
+                            <h3 className="skills__name">TypeScript</h3>
+                            <span className="skills__level">Beginner</span>
                         </div>
                     </div>
 
                     <div className="skills__data">
-                        <i className="bx bx-edit-alt"></i>
+                        <i className="bx bxl-xing"></i>
                         <div>
-                            <h3 className="skills__name">Malayalam</h3>
-                            <span className="skills__level">Native</span>
+                            <h3 className="skills__name">Next JS</h3>
+                            <span className="skills__level">Beginner</span>
                         </div>
                     </div>
                 </div>

@@ -64,10 +64,13 @@ export default function CustomCube() {
       const width = window.innerWidth;
       if (width < 768) { // Mobile and small devices
         torso.scale.set(0.8, 1, 1.3);
+        scene.add(torso);
       } else if (width < 1200) { // Tablets and medium devices
         torso.scale.set(0.8, 1, 1.3);
+        scene.add(torso);
       } else { // Desktop
         torso.scale.set(1, 0.8, 1.2);
+        scene.add(torso);
       }
     }
 
@@ -101,16 +104,25 @@ export default function CustomCube() {
         rightArm.scale.set(0.6, 0.8, 1);
         leftArm.position.x = -1.2;
         rightArm.position.x = 1.2;
+        scene.add(leftArm);
+        scene.add(rightArm);
+
       } else if (width < 1200) { // Tablet
         leftArm.scale.set(0.6, 0.8, 1);
         rightArm.scale.set(0.6, 0.8, 1);
         leftArm.position.x = -1.2;
         rightArm.position.x = 1.2;
+        scene.add(leftArm);
+        scene.add(rightArm);
+
       } else { // Desktop
         leftArm.scale.set(0.8, 0.5, 1.8);
         rightArm.scale.set(0.8, 0.5, 1.8);
         leftArm.position.y = -2.3;
         rightArm.position.y = -2.3;
+        scene.add(leftArm);
+        scene.add(rightArm);
+
       }
     }
 
