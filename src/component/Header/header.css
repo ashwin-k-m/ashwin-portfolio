@@ -1,7 +1,8 @@
 header {
     width: 100%;
     position: fixed;
-    padding-top: 1.3rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
@@ -49,6 +50,10 @@ header {
     color: var(--title-color-dark);
 }
 
+.scroll-header {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
 @media screen and (max-width: 992px) {
     .header {
         top: initial;
@@ -70,18 +75,22 @@ header {
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
-    .show-menu{
+
+    .show-menu {
         bottom: 0;
     }
-    .nav__list{
+
+    .nav__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
-    .nav__icon{
+
+    .nav__icon {
         font-size: 1.5rem;
     }
-    .nav__close{
+
+    .nav__close {
         position: absolute;
         right: 1.5rem;
         bottom: 0.5rem;
@@ -89,14 +98,17 @@ header {
         cursor: pointer;
         color: var(--title-color);
     }
-    .nav__close:hover{
+
+    .nav__close:hover {
         color: var(--title-color-dark);
     }
-    .nav__toggle{
+
+    .nav__toggle {
         font-size: 1.1rem;
         padding: 1rem;
         cursor: pointer;
     }
+
     .nav__icon,
     .nav__close,
     .nav__toggle {
@@ -105,14 +117,16 @@ header {
 }
 
 @media screen and (max-width: 350px) {
-    .header{
+    .header {
         max-width: 344px;
         width: 100%;
     }
-    .nav__menu{
+
+    .nav__menu {
         padding: 2rem 0.25rem 4rem;
     }
-    .nav__list{
+
+    .nav__list {
         column-gap: 0;
     }
 }

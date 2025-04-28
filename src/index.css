@@ -131,7 +131,7 @@ img {
 .container {
   max-width: 992px;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
 }
 
 .grid {
@@ -195,8 +195,7 @@ img {
   }
 }
 
-@media screen and (max-width: 576px) {
-}
+@media screen and (max-width: 576px) {}
 
 /* For small devices */
 @media screen and (max-width: 350px) {
@@ -205,7 +204,7 @@ img {
   }
 
   .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+    padding-left: var(--mb-1);
+    padding-right: var(--mb-1);
   }
 }

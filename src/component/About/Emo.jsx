@@ -191,7 +191,7 @@ export default function CustomCube() {
           cube.rotation.y += 0.002;
           if (now - lastMoveTime > 3000) {
             cube.rotation.y -= 0.004;
-            if(now - lastMoveTime > 6000) {
+            if (now - lastMoveTime > 6000) {
               cube.rotation.y += 0.008;
               lastMoveTime = now; // Reset last move time to avoid continuous rotation
               adjustRotation();
